@@ -65,11 +65,11 @@ public class Main {
             System.out.println(ar[i] + " ");
         }
 
-        String s = "hello";
-        for (int i1 = s.length() - 1; i1 > 0; i1--)
-            System.out.printf("%c", s.charAt(i1));
+        String s = "";
+        //for (int i1 = s.length() - 1; i1 > 0; i1--)
+           // System.out.printf("%c", s.charAt(i1));
         stringArray();
-        arrayReverse(s);
+        revString(s);
 
     }
 
@@ -89,27 +89,20 @@ public class Main {
         s[9] = "Remy";
         //String s = "hello World";
         for (int i1 = 0; i1 < s.length; i1++) {
-            String rev = arrayReverse(s[i1]);
+            String rev = revString(s[i1]);
             System.out.println(" " + s[i1] + "<->" + rev);
         }
     }
 
-    public static String arrayReverse(String s) {
-        char new_s[] ;//= s.toCharArray();
-        String str;
-
-        for (int j1 = s.length()-1; j1 >= 0; j1--) {
-
-            System.out.printf("%c", s.charAt(j1));
-            //str = new String();
-            //new_s  = s.toCharArray();
-            //System.out.printf(new_s.toString());
-            //new_s[j1].toString() = s.charAt(j1);
-
-
-
+    public static String revString (String str)
+    {
+        char c [] = str.toCharArray();
+        String rev="";
+        for (int i = c.length-1; i>=0; i--)
+        {
+            rev= rev+c[i];
         }
-        return s;
+        return rev;
     }
 }
 
